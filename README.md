@@ -33,7 +33,7 @@ FBMC系统可能和OFDM系统共存。由于FBMC是OFDM的演化，所以一定�
 
 ### 1. 作为多载波调制器的FFT
 逆快速傅里叶变换(**iFFT**)可进行多载波调制而快速傅里叶变换可进行多载波解调。现有一个多载波传输系统，其发送方和接收方如图**Fig.1**所示。
-![ Fig.1.  Multicarrier modulation with the FFT ](./FBMC_Prime/Fig1.svg)
+![ Fig.1.  Multicarrier modulation with the FFT ](/E/PythonDoc/FBMC_Prime/Fig1.svg)
 显然从图中可看出，由于**FFT**模块和**iFFT**模块串联在一起，发送方在**iFFT**模块输入的数据块可以在接收方的**FFT**模块输出端恢复出来。
 这个运作过程的详细描述如下。
 **iFFT**和**FFT**的点数是$M$，则有该组$M$样本，即$d_i(mM)$ ($0\le i \le M-1$)被送往**iFFT**输入端。那么在$mM \le n \lt (m+1)M$上**iFFT**的输出端可表示为
